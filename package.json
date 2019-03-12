@@ -4,7 +4,15 @@
   "description": "Nathan Johnson's Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "start-hmr": "ng serve --hmr -e=hmr -sm=false",
+    "start-hmr-sourcemaps": "ng serve --hmr -e=hmr",
+    "build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --dev",
+    "build-prod": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --prod",
+    "test": "ng test --code-coverage --single-run --browsers=ChromeHeadless --reporters=progress,junit -sm=false",
+    "lint": "ng-lint",
+    "e2e": "ng e2e"
   },
   "repository": {
     "type": "git",
