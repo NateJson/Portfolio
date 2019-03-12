@@ -18,7 +18,7 @@ module.exports = function (config) {
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage/portfolio'),
-      reports: ['html', 'lcovonly', 'text-summary'],
+      reports: ['html', 'lcovonly', 'lcov'],
       fixWebpackSourcePaths: true
     },
     angularCLI: {
@@ -30,7 +30,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['ChromeHeadless'],
-    singleRun: true,
+    singleRun: false,
     restartOnFileChange: true
   });
 };
